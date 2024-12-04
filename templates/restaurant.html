@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+{% extends "index.html" %}
+
+{% block body_block%}
+<form method="POST">
+    <div class="form-group">
+     <h1>Please Search a Restaurant</h1>
+         {{form.as_p}}
+         {% csrf_token %}
+         <input class="btn btn-primary" value="Search" type="submit">
+     
+    </div>
+</form> 
+<hr>
+{{infoerrormessage}}
+
+<h1>{{bussinessName1}}</h1>
+{% for x in bussinessReview1 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content1{{forloop.counter}}">
+    
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content1{{forloop.counter}}">Copy</button>
+
+{%endfor%}
+<h1>{{bussinessName2}}</h1>
+{% for x in bussinessReview2 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content2{{forloop.counter}}">
+    
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content2{{forloop.counter}}">Copy</button>
+{%endfor%}
+<h1>{{bussinessName3}}</h1>
+{% for x in bussinessReview3 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content3{{forloop.counter}}">
+    
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content3{{forloop.counter}}">Copy</button>
+{%endfor%}
+<h1>{{bussinessName4}}</h1>
+{% for x in bussinessReview4 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content4{{forloop.counter}}">
+    
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content4{{forloop.counter}}">Copy</button>
+{%endfor%}
+<h1>{{bussinessName5}}</h1>
+{% for x in bussinessReview5 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content5{{forloop.counter}}">
+    
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content5{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+
+{% block scripts %}
+<script>
+ document.querySelectorAll(".copy").forEach(copyButton=>{
+   copyButton.addEventListener("click",()=>{
+      //console.log('test')
+      const targetElement = document.querySelector(copyButton.dataset.copy);
+      //console.log(targetElement)
+      const texttoCopy = targetElement.textContent.trim()
+      //console.log(texttoCopy)
+      navigator.clipboard.writeText(texttoCopy)
+   })
+ })
+</script>
+{% endblock scripts %}
+{% endblock %}

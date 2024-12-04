@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+{% extends "index.html" %}
+
+{% block body_block %}
+<form method="POST">
+    <div class="form-group">
+     <h1>Please Search any Movies</h1>
+         {{form.as_p}}
+         {% csrf_token %}
+         <input  class="btn btn-primary" value="Search" type="submit">
+     
+    </div>
+</form> 
+<!-- <div>
+   <p>Please press the Now Playing search Button to Search top 20 Currently Played Movies Reviews</p>
+   <button class="btn btn-primary" id="nowPlaying">Now Playing Movies</button>
+</div>
+<div>
+   <p>Please press the Popular search Button to Search top 20 Popular Movies Reviews</p>
+   <button class="btn btn-primary" id="popular">Popular Movies</button>
+</div>  -->
+
+<p>{{message}}</p>
+<hr>
+
+{%if reviews1%}
+<h1>{{movieName1}}</h1>
+  
+      {% for x in reviews1 %}
+         <p>Review {{forloop.counter}}:</p>
+         <div class="content1{{forloop.counter}}">
+   
+            <p>{{x}}</p>
+         </div>
+         <button type="button" class="copy btn btn-success" data-copy=".content1{{forloop.counter}}">Copy</button>
+
+      {%endfor%}
+   
+   {%endif%}
+
+{%if reviews2 %}
+<h1>{{movieName2}}</h1>
+
+{% for x in reviews2 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content2{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content2{{forloop.counter}}">Copy</button>
+{%endfor%}
+{%endif%} 
+{%if reviews3%}
+<h1>{{movieName3}}</h1>
+
+{% for x in reviews3 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content3{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content3{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews4%}
+<h1>{{movieName4}}</h1>
+
+{% for x in reviews4 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content4{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content4{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews5%}
+<h1>{{movieName5}}</h1>
+
+{% for x in reviews5 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content5{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content5{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews6%}
+<h1>{{movieName6}}</h1>
+
+{% for x in reviews6 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content6{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content6{{forloop.counter}}">Copy</button>
+{%endfor%}
+{%endif%}
+{%if review7%}
+<h1>{{movieName7}}</h1>
+
+{% for x in reviews7 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content7{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content7{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews8%}
+<h1>{{movieName8}}</h1>
+
+{% for x in reviews8 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content8{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content8{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews9%}
+<h1>{{movieName9}}</h1>
+
+{% for x in reviews9 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content9{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content9{{forloop.counter}}">Copy</button>
+{%endfor%}
+{%endif%}
+{%if reviews10%}
+<h1>{{movieName10}}</h1>
+
+{% for x in reviews10 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content10{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content10{{forloop.counter}}">Copy</button>
+{%endfor%}
+{%endif%}
+{%if reviews11%}
+<h1>{{movieName11}}</h1>
+
+{% for x in reviews11 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content11{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content11{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews12%}
+<h1>{{movieName12}}</h1>
+
+{% for x in reviews12 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content12{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content12{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews13%}
+<h1>{{movieName13}}</h1>
+
+{% for x in reviews13 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content13{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content13{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews14%}
+<h1>{{movieName14}}</h1>
+
+{% for x in reviews14 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content14{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content14{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews15%}
+<h1>{{movieName15}}</h1>
+
+{% for x in reviews15 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content15{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content15{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{% if reviews16 %}
+<h1>{{movieName16}}</h1>
+
+{% for x in reviews16 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content16{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content16{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{% if reviews17%}
+<h1>{{movieName17}}</h1>
+
+{% for x in reviews17 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content17{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content17{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews18%}
+<h1>{{movieName18}}</h1>
+
+{% for x in reviews18 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content18{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content18{{forloop.counter}}">Copy</button>
+{%endfor%}
+
+{%endif%}
+{%if reviews19 %}
+<h1>{{movieName19}}</h1>
+
+{% for x in reviews19 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content19{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content19{{forloop.counter}}">Copy</button>
+{%endfor%}
+{%endif%}
+{% if reviews20%}
+<h1>{{movieName20}}</h1>
+
+{% for x in reviews20 %}
+<p>Review {{forloop.counter}}:</p>
+<div class="content20{{forloop.counter}}">
+   
+   <p>{{x}}</p>
+</div>
+<button type="button" class="copy btn btn-success" data-copy=".content20{{forloop.counter}}">Copy</button>
+{%endfor%}
+{%endif%}
+{% block scripts %}
+<script>
+ document.querySelectorAll(".copy").forEach(copyButton=>{
+   copyButton.addEventListener("click",(e)=>{
+      e.preventDefault();
+      console.log('test')
+      const targetElement = document.querySelector(copyButton.dataset.copy);
+      console.log(targetElement)
+      const texttoCopy = targetElement.textContent.trim()
+      console.log(texttoCopy)
+      navigator.clipboard.writeText(texttoCopy)
+   })
+ })  
+document.getElementById('nowPlaying').addEventListener('click',function(e){
+
+   e.preventDefault()
+   console.log('clicked')
+   let csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+   const postdata = JSON.stringify({'data' : 'Now Playing'});
+
+var xhr = new XMLHttpRequest();
+
+// Initialize a POST request to the desired URL
+xhr.open("POST", '{% url "myNowPlayingbuttonPost" %}', true);
+
+// Set the Content-Type header for the request
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader('X-CSRFToken', csrfToken);
+
+// Define the data you want to send in the request body
+
+// Define what to do when the request completes
+xhr.onload = function () {
+  if (xhr.status >= 200 && xhr.status < 300) {
+    // Handle success (status code 200-299)
+    var response = JSON.parse(xhr.responseText);
+    console.log("Response: it worked",xhr.responseText);
+    document.body.innerHTML = response.html
+    document.querySelectorAll(".copy").forEach(copyButton=>{
+      copyButton.addEventListener("click",(e)=>{
+      e.preventDefault();
+      console.log('test')
+      const targetElement = document.querySelector(copyButton.dataset.copy);
+      console.log(targetElement)
+      const texttoCopy = targetElement.textContent.trim()
+      console.log(texttoCopy)
+      navigator.clipboard.writeText(texttoCopy)
+   })
+ })
+ document.getElementById('popular').addEventListener('click',function(){
+   e.preventDefault()
+   console.log('clicked')
+   let csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+   const postdata = JSON.stringify({'data' : 'Popular'});
+
+var xhr = new XMLHttpRequest();
+
+// Initialize a POST request to the desired URL
+xhr.open("POST", '{% url "myPopularbuttonPost" %}', true);
+
+// Set the Content-Type header for the request
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader('X-CSRFToken',csrfToken);
+xhr.onload = function () {
+  if (xhr.status >= 200 && xhr.status < 300) {
+    // Handle success (status code 200-299)
+    var response = JSON.parse(xhr.responseText);
+    console.log("Response: it worked",xhr.responseText);
+    document.body.innerHTML = response.html
+    document.querySelectorAll(".copy").forEach(copyButton=>{
+      copyButton.addEventListener("click",(e)=>{
+      e.preventDefault();
+      console.log('test')
+      const targetElement = document.querySelector(copyButton.dataset.copy);
+      console.log(targetElement)
+      const texttoCopy = targetElement.textContent.trim()
+      console.log(texttoCopy)
+      navigator.clipboard.writeText(texttoCopy)
+
+      })
+   })
+   document.getElementById('nowPlaying').addEventListener('click',function(){
+      console.log('clicked')
+       let csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+       const postdata = JSON.stringify({'data' : 'Now Playing'});
+
+       var xhr = new XMLHttpRequest();
+
+       // Initialize a POST request to the desired URL
+       xhr.open("POST", '{% url "myNowPlayingbuttonPost" %}', true);
+
+       // Set the Content-Type header for the request
+       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+       xhr.setRequestHeader("Content-Type", "application/json");
+       xhr.setRequestHeader('X-CSRFToken', csrfToken);
+
+       // Define the data you want to send in the request body
+
+       // Define what to do when the request completes
+       xhr.onload = function () {
+       if (xhr.status >= 200 && xhr.status < 300) {
+  // Handle success (status code 200-299)
+       var response = JSON.parse(xhr.responseText);
+       console.log("Response: it worked",xhr.responseText);
+       document.body.innerHTML = response.html
+       document.querySelectorAll(".copy").forEach(copyButton=>{
+       copyButton.addEventListener("click",(e)=>{
+       e.preventDefault();
+       console.log('test')
+       const targetElement = document.querySelector(copyButton.dataset.copy);
+       console.log(targetElement)
+       const texttoCopy = targetElement.textContent.trim()
+       console.log(texttoCopy)
+       navigator.clipboard.writeText(texttoCopy)
+       }) 
+    })
+ } else {
+  // Handle error (status code 400-499, 500-599)
+  console.error("Request failed with status:", xhr.status);
+ }
+ };
+
+ // Define what to do if the request fails (e.g., network issues)
+ xhr.onerror = function () {
+ console.error("Network error");
+ };
+
+ // Send the POST request with the data
+ xhr.send(postdata);
+
+
+})
+  } 
+  else {
+    // Handle error (status code 400-499, 500-599)
+    console.error("Request failed with status:", xhr.status);
+  }
+};
+
+// Define what to do if the request fails (e.g., network issues)
+xhr.onerror = function () {
+  console.error("Network error");
+};
+
+// Send the POST request with the data
+xhr.send(postdata);
+//-------------------------------------------------------------------------------------------------------------------------------------
+
+ })
+  } else {
+    // Handle error (status code 400-499, 500-599)
+    console.error("Request failed with status:", xhr.status);
+  }
+};
+
+// Define what to do if the request fails (e.g., network issues)
+xhr.onerror = function () {
+  console.error("Network error");
+};
+
+// Send the POST request with the data
+xhr.send(postdata);
+
+
+})
+  
+document.getElementById('popular').addEventListener('click',function(e){
+   //----------------------------------------------------------------------------------------------------------------------
+   e.preventDefault()
+   console.log('clicked')
+   let csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+   const postdata = JSON.stringify({'data' : 'Popular'});
+
+var xhr = new XMLHttpRequest();
+
+// Initialize a POST request to the desired URL
+xhr.open("POST", '{% url "myPopularbuttonPost" %}', true);
+
+// Set the Content-Type header for the request
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader('X-CSRFToken',csrfToken);
+xhr.onload = function () {
+  if (xhr.status >= 200 && xhr.status < 300) {
+    // Handle success (status code 200-299)
+    var response = JSON.parse(xhr.responseText);
+    console.log("Response: it worked",xhr.responseText);
+    document.body.innerHTML = response.html
+    document.querySelectorAll(".copy").forEach(copyButton=>{
+      copyButton.addEventListener("click",(e)=>{
+      e.preventDefault();
+      console.log('test')
+      const targetElement = document.querySelector(copyButton.dataset.copy);
+      console.log(targetElement)
+      const texttoCopy = targetElement.textContent.trim()
+      console.log(texttoCopy)
+      navigator.clipboard.writeText(texttoCopy)
+
+      })
+   })
+   //----------------------------------------------------------------------------------------------------------------------------------------
+   document.getElementById('nowPlaying').addEventListener('click',function(){
+      console.log('clicked')
+       let csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+       const postdata = JSON.stringify({'data' : 'Now Playing'});
+
+       var xhr = new XMLHttpRequest();
+
+       // Initialize a POST request to the desired URL
+       xhr.open("POST", '{% url "myNowPlayingbuttonPost" %}', true);
+
+       // Set the Content-Type header for the request
+       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+       xhr.setRequestHeader("Content-Type", "application/json");
+       xhr.setRequestHeader('X-CSRFToken', csrfToken);
+
+       // Define the data you want to send in the request body
+
+       // Define what to do when the request completes
+       xhr.onload = function () {
+       if (xhr.status >= 200 && xhr.status < 300) {
+  // Handle success (status code 200-299)
+       var response = JSON.parse(xhr.responseText);
+       console.log("Response: it worked",xhr.responseText);
+       document.body.innerHTML = response.html
+       document.querySelectorAll(".copy").forEach(copyButton=>{
+       copyButton.addEventListener("click",(e)=>{
+       e.preventDefault();
+       console.log('test')
+       const targetElement = document.querySelector(copyButton.dataset.copy);
+       console.log(targetElement)
+       const texttoCopy = targetElement.textContent.trim()
+       console.log(texttoCopy)
+       navigator.clipboard.writeText(texttoCopy)
+       }) 
+    })
+ } else {
+  // Handle error (status code 400-499, 500-599)
+  console.error("Request failed with status:", xhr.status);
+ }
+ };
+
+ // Define what to do if the request fails (e.g., network issues)
+ xhr.onerror = function () {
+ console.error("Network error");
+ };
+
+ // Send the POST request with the data
+ xhr.send(postdata);
+
+
+})
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+  } 
+  else {
+    // Handle error (status code 400-499, 500-599)
+    console.error("Request failed with status:", xhr.status);
+  }
+};
+
+// Define what to do if the request fails (e.g., network issues)
+xhr.onerror = function () {
+  console.error("Network error");
+};
+
+// Send the POST request with the data
+xhr.send(postdata);
+//-------------------------------------------------------------------------------------------------------------------------------------
+})
+</script>
+{% endblock scripts %}
+{% endblock %}
+
